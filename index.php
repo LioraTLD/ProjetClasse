@@ -46,70 +46,38 @@ $club[3]->AjouterSport($SportBallon4);
 $club[3]->AjouterSport($SportRelais2);
 
 
-echo'<h3>Liste des clubs: </h3> <a href="localhost:8000"></a><br>';
-echo'<a href="localhost:8000?id=1" >1-Dijon 18 </a><br>';
-echo'<a href="localhost:8000id=2"> 2-PSG 32</a><br>';
-echo'<a href="localhost:8000?id=3"> 3-Nantes 2</a><br>';
+echo'<h1>Liste des clubs: </h1> <br>';
+echo'<a href="?id=1"> 1-Dijon 18 </a><br>';
+echo'<a href="?id=2"> 2-PSG 32</a><br>';
+echo'<a href="?id=3"> 3-Nantes 2</a><br>';
 
 
-Foreach ($SF as $KeySF => $SF);
+
+if($_GET['id']==1)
 {
-    echo'<h3> Liste des sports du club de Dijon: </h3>';
-    echo  " DESCRIPTION Nom du sport: " . $SF->getnomSport() . ", Nombre de Joueurs:" . $SF->getnbJoueurs() . ", Longueur" . $SF->getlongueur() . ", Largeur" . $SF->getlargeur() . "<br>";
+        echo'<h3> Liste des sports du club de Dijon: </h3>';
+        echo  " DESCRIPTION Nom du sport: " . $SF->getnomSport() . ", Nombre de Joueurs:" . $SF->getnbJoueurs() . ", Longueur" . $SF->getlongueur() . ", Largeur" . $SF->getlargeur() . "<br>";
 
 }
 
-Foreach ($Sport1 as $keySport1 =>$Sport1);
+
+if($_GET['id']==2)
 {
-    echo'<h3> Liste des sports du club du PSG: </h3>';
-    echo "DESCRIPTION Nom du sport:" .$Sport1->getNomSport(). ", Nombre de Joueurs:" .$Sport1->getnbJoueurs(). "<br>";
+    echo '<h3> Liste des sports du club du PSG: </h3>';
+    echo "DESCRIPTION Nom du sport:" . $Sport1->getNomSport() . ", Nombre de Joueurs:" . $Sport1->getnbJoueurs() . "<br>";
+    echo "DESCRIPTION Nom du sport:" . $Sport2->getNomSport() . ", Nombre de Joueurs:" . $Sport2->getnbJoueurs() . "<br>";
+    echo "DESCRIPTION Nom du sport:" . $SportBallon1->getNomSport() . ", Nombre de Joueurs:" . $SportBallon2->getnbJoueurs() . ", Longueur" . $SportBallon1->getlongueur() . ", Largeur" . $SportBallon1->getlargeur() . "<br>";
+    echo "DESCRIPTION Nom du sport:" . $SportBallon2->getNomSport() . ", Nombre de Joueurs:" . $SportBallon2->getnbJoueurs() . ", Longueur" . $SportBallon2->getlongueur() . ", Largeur" . $SportBallon2->getlargeur() . "<br>";
+    echo "DESCRIPTION Nom du sport:" . $SportRelais1->getNomSport() . ", Nombre de Joueurs:" . $SportRelais1->getnbJoueurs() . ",Distance:" . $SportRelais1->getDistance() . "<br>";
 }
 
-Foreach ($Sport2 as $keySport2 =>$Sport2);
-{
-    echo "DESCRIPTION Nom du sport:" .$Sport2->getNomSport(). ", Nombre de Joueurs:" .$Sport2->getnbJoueurs(). "<br>";
-}
-
-Foreach ($SportBallon1 as $keySportBallon1 =>$SportBallon1);
-{
-    echo "DESCRIPTION Nom du sport:" .$SportBallon1->getNomSport(). ", Nombre de Joueurs:" .$SportBallon2->getnbJoueurs(). ", Longueur" .$SportBallon1->getlongueur(). ", Largeur" .$SportBallon1->getlargeur(). "<br>";
-}
-
-
-Foreach ($SportBallon2 as $keySportBallon2 =>$SportBallon2);
-{
-    echo "DESCRIPTION Nom du sport:" .$SportBallon2->getNomSport(). ", Nombre de Joueurs:" .$SportBallon2->getnbJoueurs(). ", Longueur" .$SportBallon2->getlongueur(). ", Largeur" .$SportBallon2->getlargeur(). "<br>";
-}
-
-
-Foreach ($SportRelais1 as $keySportRelais1 =>$SportRelais1);
-{
-    echo "DESCRIPTION Nom du sport:" .$SportRelais1->getNomSport(). ", Nombre de Joueurs:" .$SportRelais1->getnbJoueurs(). ",Distance:" .$SportRelais1->getDistance(). "<br>";
-}
-
-Foreach ($Sport3 as $keySport3 =>$Sport3);
+if ($_GET['id']==3)
 {
     echo '<h3> Liste des sports du club de Nantes: </h3>';
     echo "DESCRIPTION Nom du sport:" .$Sport3->getNomSport(). ", Nombre de Joueurs:" .$Sport3->getnbJoueurs(). "<br>";
-}
-
-Foreach ($SportBallon3 as $keySportBallon3 =>$SportBallon3);
-{
-
     echo "DESCRIPTION Nom du sport:" .$SportBallon3->getNomSport(). ", Nombre de Joueurs:" .$SportBallon3->getnbJoueurs(). ", Longueur:" .$SportBallon3->getlongueur(). ", Largeur:" .$SportBallon3->getlargeur(). "<br>";
-}
-
-Foreach ($SportBallon4 as $keySportBallon4 =>$SportBallon4);
-{
-
     echo "DESCRIPTION Nom du sport:" .$SportBallon4->getNomSport(). ", Nombre de Joueurs:" .$SportBallon4->getnbJoueurs(). ", Longueur:" .$SportBallon4->getlongueur(). ", Largeur:" .$SportBallon4->getlargeur(). "<br>";
-}
-
-
-Foreach ($SportRelais2 as $keySportRelais2 =>$SportRelais2);
-{
     echo "DESCRIPTION Nom du sport:" .$SportRelais2->getNomSport(). ", Nombre de Joueurs:" .$SportRelais2->getnbJoueurs(). ", Distance:" .$SportRelais2->getDistance(). "<br>";
 }
 
-
-
+?>
