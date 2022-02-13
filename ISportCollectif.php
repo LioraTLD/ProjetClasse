@@ -2,5 +2,5 @@
 
 interface ISportCollectif
 {
-
+    public function getnbJoueurs();
 }

@@ -8,7 +8,8 @@ interface Isport
      *
      * @return mixed
      */
-    public function getNomSport();
+    public function getnomSport();
+
 
     /**
      *
@@ -16,5 +17,6 @@ interface Isport
     // Renvoi de la description du sport
 
     public function getDescription();
+
 
 }
